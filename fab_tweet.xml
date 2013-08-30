@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<extension group="content" method="upgrade" type="plugin" version="30">
+	<name>fab_tweet</name>
+	<author>Rob Clayburn</author>
+	<creationDate>30/08/2013</creationDate>
+	<copyright>(C) 2005-2013 Pollen 8 Design Ltd. All rights reserved.</copyright>
+	<authorEmail>rob@pollen-8.co.uk</authorEmail>
+	<authorUrl>www.fabrikar.com</authorUrl>
+	<version>1.0</version>
+	<description>FAB_TWEET_XML_DESCRIPTION</description>
+	<files>
+		<filename module="fab_tweet">fab_tweet.php</filename>
+		<filename>index.html</filename>
+		<filename>fab_tweet.css</filename>
+		<filename>timeago.js</filename>
+		<folder>language</folder>
+		<folder>abraham-twitteroauth</folder>
+		<folder>tmpl</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+			
+				<field name="consumer_key"
+					type="text"
+					label="PLG_FAB_TWEET_CONSUMER_KEY" />
+					
+				<field name="consumer_secret"
+					type="text"
+					label="PLG_FAB_TWEET_CONSUMER_SECRET" />
+					
+				<field name="oauth_token"
+					type="text"
+					label="PLG_FAB_TWEET_OAUTH_TOKEN" />
+					
+				<field name="oauth_token_secret"
+					type="text"
+					label="PLG_FAB_TWEET_OAUTH_TOKEN_SECRET" />
+				
+				<field name="moduleclass_sfx"
+					type="text"
+					description="PLG_FAB_TWEET_CLASS_SUFFIX_DESC"
+					label="PLG_FAB_TWEET_CLASS_SUFFIX_LABEL"/>
+				
+				<!-- <field name="timeline"
+					type="list"
+					default="user"
+					description="PLG_FAB_TWEET_TIMELINE_DESC"
+					label="PLG_FAB_TWEET_TIMELINE_LABEL" >
+						<option value="user">PLG_FAB_TWEET_OPTION_USER</option>
+						<option value="mentions">PLG_FAB_TWEET_OPTION_MENTIONS</option>
+						<option value="home">PLG_FAB_TWEET_OPTION_HOME</option>
+						<option value="search">PLG_FAB_TWEET_SEARCH</option>
+				</field> -->
+					
+				<field name="screen_name"
+					type="text"
+					description="PLG_FAB_TWEET_SCREEN_NAME_DESC"
+					label="PLG_FAB_TWEET_SCREEN_NAME_LABEL" />
+				
+				<!-- <field name="track"
+					type="text"
+					description="PLG_FAB_TWEET_TRACK_DESC"
+					label="PLG_FAB_TWEET_TRACK_LABEL" /> -->
+					
+				<field name="length"
+					type="text"
+					size="3"
+					default="5"
+					description="PLG_FAB_TWEET_DISPLAY_NUM_DESC"
+					label="PLG_FAB_TWEET_DISPLAY_NUM_LABEL" />
+				
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field name="cached"
+					type="radio"
+					default="1"
+					description="PLG_FAB_TWEET_CACHE_DESC"
+					label="PLG_FAB_TWEET_CACHE_LABEL" >
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>	
+				</field>
+				
+				<field name="cachetime"
+					type="field"
+					size="3"
+					default="5"
+					description="PLG_FAB_TWEET_CACHE_TIME_DESC"
+					label="PLG_FAB_TWEET_CACHE_TIME_LABEL" />
+				
+				<field name="since_id"
+					type="field"
+					description="PLG_FAB_TWEET_SINCE_ID_DESC"
+					label="PLG_FAB_TWEET_SINCE_ID_LABEL" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
